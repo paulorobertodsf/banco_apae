@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Semanal</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div id="tabela-semanal">
+        <div id="logo-titulo">LOGO OU TÍTULO</div>
+        <table>
+            <thead>
+                <tr id="dias-da-semana">
+                    <th>SEGUNDA</th>
+                    <th>TERÇA</th>
+                    <th>QUARTA</th>
+                    <th>QUINTA</th>
+                    <th>SEXTA</th>
+                    <th>SÁBADO</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+        <div id="icone-editar">
+            <img src="/img/ferramenta-lapis (1).png" alt="Ícone de lápis" class="icone-lapis" onclick="abrirOpcoes()">
+        </div>
+    </div>
+    <div class="opcoes" id="opcoes">
+        <button onclick="abrirAbaAdicionarMarcacao()">Marcar</button>
+        <button onclick="ajuda()">Ajuda</button>
+    </div>
+
+    <div id="aba-adicionar-marcacao" class="aba">
+        <h2>Adicionar Marcação</h2>
+        <form id="marcacao-form">
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" name="descricao" required>
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+            <label for="horario">Horário:</label>
+            <input type="time" id="horario" name="horario" required>
+            <label for="nome_profissional">Nome do Profissional:</label>
+            <input type="text" id="nome_profissional" name="nome_profissional" required>
+            <label for="nome_aluno">Nome do Aluno:</label>
+            <input type="text" id="nome_aluno" name="nome_aluno" required>
+            <label for="id_horario">ID do Horário:</label>
+            <input type="number" id="id_horario" name="id_horario" required>
+            <label for="id_sala">ID da Sala:</label>
+            <input type="number" id="id_sala" name="id_sala" required>
+            <label for="id_status">ID do Status:</label>
+            <input type="number" id="id_status" name="id_status" required>
+            <button type="submit">Adicionar</button>
+        </form>
+        <button onclick="fecharAbaAdicionarMarcacao()">Fechar</button>
+    </div>
+
+    <script src="/js/home.js"></script>
+</body>
+</html>
